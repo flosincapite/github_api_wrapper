@@ -131,19 +131,3 @@ class ProjectsComponent:
 if __name__ == '__main__':
     import fire
     fire.Fire(ProjectsComponent)
-    """
-    user, token = sys.argv[1:]
-    projects = ProjectsApi(user, token)
-    columns = ColumnsApi(user, token)
-    cards = CardsApi(user, token)
-    api = GitHubProjects(projects, columns, cards)
-    api.add_card_from_issue(
-            'MLH-Fellowship', 'BentoML', 'MLH Fall 2020 Projects',
-            'To Do', 'BentoML', 622)
-    """
-
-    """
-    TODO:
-    curl -u flosincapite:84c904e4dbaea213cdac9189f393f678ab836a9c -H "Accept: application/vnd.github.v3+json" https://api.github.com/orgs/MLH-Fellowship/teams  # gets team IDs
-    for GITREPO in "pallets-sphinx-themes" ; do cat teams.txt | while read TEAM_ID; do  curl -u flosincapite:84c904e4dbaea213cdac9189f393f678ab836a9c -H "Accept: application/vnd.github.v3+json" -X PUT https://api.github.com/teams/$TEAM_ID/repos/MLH-Fellowship/$GITREPO -d '{"permission":"push"}'; done; done
-    """
